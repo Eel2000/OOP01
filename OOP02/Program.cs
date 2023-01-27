@@ -4,6 +4,7 @@ namespace OOP02
 {
     internal class Program
     {
+        //TODO: add behavior for (Ordering a vehicle)
         static void Main(string[] args)
         {
             TransportCompany transportCompany1 = new TransportCompany("Orange", "France", "1234567890");
