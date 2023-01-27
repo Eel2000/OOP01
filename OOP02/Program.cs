@@ -9,8 +9,12 @@ namespace OOP02
             TransportCompany transportCompany1 = new TransportCompany("Orange", "France", "1234567890");
             Console.WriteLine("**************Welcome to my Company************");
 
-            var myNewVehicle = new Vehicle("BWM","BMW","RedDark",DateTime.Now.AddYears(-50));
-            transportCompany1.AddVehicle(myNewVehicle);
+            var myNewVehicle = new Vehicle("AUDI","AUDI","GRAY",DateTime.Now.AddYears(-40));
+            var myNewVehicle2 = new Vehicle("FORD","FORD","Blue",DateTime.Now.AddYears(-35));
+
+            transportCompany1.AddVehicle(myNewVehicle); //old one
+            transportCompany1.Vehicles.Add(myNewVehicle2); //new one
+            transportCompany1.AddVehicle2("BWM", "BMW", "RedDark", DateTime.Now.AddYears(-50));
 
             ConsoleKeyInfo key;
             do

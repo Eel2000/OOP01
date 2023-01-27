@@ -11,7 +11,7 @@ namespace OOP02.Models
         public string Name { get; private set; }
         public string Address { get; private set; }
         public string PhoneNo { get; private set; }
-        public List<Vehicle> Vehicles { get; private set; }
+        public List<Vehicle> Vehicles { get; set; }
 
         public TransportCompany(string name, string address, string phoneNo)
         {
@@ -32,6 +32,15 @@ namespace OOP02.Models
             Vehicles.Add(vehicle);
             Console.WriteLine($"You've added the {vehicle.Name} vehicle to your catalog and store.");
         }
+
+
+        public void AddVehicle2(string name, string mark, string color, DateTime fabYear)
+        {
+            var newV = new Vehicle(name, mark, color, fabYear);
+            Vehicles.Add(newV);
+            Console.WriteLine("added!");
+        }
+
 
         public void ShowCatalog()
         {
