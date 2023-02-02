@@ -14,8 +14,7 @@ namespace OOP02
             var myNewVehicle2 = new Vehicle("FORD","FORD","Blue",DateTime.Now.AddYears(-35));
 
             transportCompany1.AddVehicle(myNewVehicle); //old one
-            transportCompany1.Vehicles.Add(myNewVehicle2); //new one
-            transportCompany1.AddVehicle2("BWM", "BMW", "RedDark", DateTime.Now.AddYears(-50));
+            transportCompany1.AddVehicle2("BWM", "BMW", "RedDark", DateTime.Now.AddYears(-50));//con
 
             ConsoleKeyInfo key;
             do

@@ -11,7 +11,7 @@ namespace OOP02.Models
         public string Name { get; private set; }
         public string Address { get; private set; }
         public string PhoneNo { get; private set; }
-        public List<Vehicle> Vehicles { get; set; }
+        public List<Vehicle> Vehicles { get; private set; }
 
         public TransportCompany(string name, string address, string phoneNo)
         {
