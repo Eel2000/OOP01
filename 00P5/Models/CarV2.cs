@@ -1,22 +1,29 @@
 ﻿using _00P5.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace _00P5.Models
 {
-    public class MotoCyclette : ICar
+    public class CarV2 : ICar
     {
-        public IList<string>? Tags { get; set; }
+        public CarV2(float maxSpeed, string make, float conductorSpeed)
+        {
+            MaxSpeed = maxSpeed;
+            Make = make;
+            ConductorSpeed = conductorSpeed;
+        }
+
         public float MaxSpeed { get; set; }
         public string Make { get ; set ; }
         public string Conductor { get ; set ; }
         public float ConductorSpeed { get; set; }
 
+
+
         public void DecreaseSpeed()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public void DecreaseSpeed(int speed)
         {
             throw new NotImplementedException();
         }
@@ -27,18 +34,18 @@ namespace _00P5.Models
         }
 
         public void StartEngine()
-        {   
-            throw new NotImplementedException();
+        {
+            Console.WriteLine("Engine started withount key");
         }
 
         public void StartEngine(string key)
         {
-            Console.WriteLine("engine stopped");
+            throw new NotImplementedException();
         }
 
         public void StopEngine()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("try to stop engine please wait...");
         }
 
         public void StopEngine(string key)
