@@ -7,7 +7,7 @@ namespace MyBank.Services;
 
 public class ApplicationMainService
 {
-    public string RegisterCustomer(string name, string phone, string password, string email)
+    public string RegisterCustomer(string name, string phone, string password, string email = "")
     {
         Customer customer = new()
         {
@@ -45,7 +45,7 @@ public class ApplicationMainService
             $"\n your need to keep in a safe place! to lost it please.";
     }
 
-    public BaseResponse FeedMyAccountWithMoney(string password, string accountNumber, decimal amountOfMoney)
+    public BaseResponse DepositMoney(string password, string accountNumber, decimal amountOfMoney)
     {
 
         var validationResult = TryValidateUser(password, accountNumber, out var customer);
